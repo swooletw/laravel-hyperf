@@ -9,10 +9,10 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-return [
-    'handler' => [
-        'http' => [
-            App\Exceptions\Handlers\AppExceptionHandler::class,
-        ],
-    ],
-];
+namespace App\Models;
+
+use Hyperf\DbConnection\Model\Model as BaseModel;
+
+abstract class Model extends BaseModel
+{
+}

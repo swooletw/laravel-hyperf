@@ -9,14 +9,16 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-namespace App\Controller;
+namespace App\Http\Controllers;
+
+use App\Http\Requests\DemoRequest;
 
 class IndexController extends AbstractController
 {
-    public function index()
+    public function index(DemoRequest $request)
     {
-        $user = $this->request->input('user', 'Hyperf');
-        $method = $this->request->getMethod();
+        $user = $request->input('user', 'Hyperf');
+        $method = $request->getMethod();
 
         return [
             'method' => $method,
