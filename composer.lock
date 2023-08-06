@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "549fbb99893d05a44434550ebe9955a0",
+    "content-hash": "69b870c9c5cd4d7913d2d9f2dcc71f4f",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -414,6 +414,70 @@
                 "source": "https://github.com/php-fig/http-message-util/tree/1.1.5"
             },
             "time": "2020-11-24T22:02:12+00:00"
+        },
+        {
+            "name": "friendsofhyperf/tinker",
+            "version": "v3.0.55",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/friendsofhyperf/tinker.git",
+                "reference": "dcc59152585817a0b56af4f56ed51f2f94e64592"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/friendsofhyperf/tinker/zipball/dcc59152585817a0b56af4f56ed51f2f94e64592",
+                "reference": "dcc59152585817a0b56af4f56ed51f2f94e64592",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/collection": "~3.0.0",
+                "hyperf/command": "~3.0.0",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/di": "~3.0.0",
+                "hyperf/framework": "~3.0.0",
+                "hyperf/stringable": "~3.0.0",
+                "hyperf/support": "~3.0.1",
+                "hyperf/tappable": "~3.0.0",
+                "psy/psysh": "^0.10.0|^0.11.0"
+            },
+            "suggest": {
+                "hyperf/utils": "Suggest for using `Hyperf\\Utils\\Collection` and `\\Hyperf\\Utils\\Stringable`.",
+                "hyperf/view-engine": "Suggest for using `Hyperf\\ViewEngine\\HtmlString`."
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "FriendsOfHyperf\\Tinker\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfHyperf\\Tinker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Huangdijia",
+                    "email": "huangdijia@gmail.com",
+                    "homepage": "https://github.com/huangdijia"
+                }
+            ],
+            "description": "The Powerful REPL for Hyperf.",
+            "keywords": [
+                "Tinker",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "issues": "https://github.com/friendsofhyperf/components/issues",
+                "source": "https://github.com/friendsofhyperf/components"
+            },
+            "time": "2023-06-16T07:23:43+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -4053,6 +4117,82 @@
             "time": "2021-10-29T13:26:27+00:00"
         },
         {
+            "name": "psy/psysh",
+            "version": "v0.11.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/psysh.git",
+                "reference": "0fa27040553d1d280a67a4393194df5228afea5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0fa27040553d1d280a67a4393194df5228afea5b",
+                "reference": "0fa27040553d1d280a67a4393194df5228afea5b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "nikic/php-parser": "^4.0 || ^3.1",
+                "php": "^8.0 || ^7.0.8",
+                "symfony/console": "^6.0 || ^5.0 || ^4.0 || ^3.4",
+                "symfony/var-dumper": "^6.0 || ^5.0 || ^4.0 || ^3.4"
+            },
+            "conflict": {
+                "symfony/console": "4.4.37 || 5.3.14 || 5.3.15 || 5.4.3 || 5.4.4 || 6.0.3 || 6.0.4"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.2"
+            },
+            "suggest": {
+                "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
+                "ext-pdo-sqlite": "The doc command requires SQLite to work.",
+                "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well.",
+                "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history."
+            },
+            "bin": [
+                "bin/psysh"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.11.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Psy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "An interactive shell for modern PHP.",
+            "homepage": "http://psysh.org",
+            "keywords": [
+                "REPL",
+                "console",
+                "interactive",
+                "shell"
+            ],
+            "support": {
+                "issues": "https://github.com/bobthecow/psysh/issues",
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.20"
+            },
+            "time": "2023-07-31T14:32:22+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -4095,6 +4235,258 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "swooletw/hyperf-container",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "../framework/src/container",
+                "reference": "25dc5d51ae99d156515e734a215c86668f21f8ae"
+            },
+            "require": {
+                "hyperf/context": "^3.0",
+                "hyperf/di": "^3.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SwooleTW\\Hyperf\\Container\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@pm.me",
+                    "homepage": "https://albert-chen.com"
+                }
+            ],
+            "description": "The Container package for Hyperf.",
+            "support": {
+                "issues": "https://github.com/swooletw/hyperf-packages/issues",
+                "source": "https://github.com/swooletw/hyperf-packages"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "swooletw/hyperf-encryption",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "../framework/src/encryption",
+                "reference": "3828bdb1490933245f2bb227460ffc1f0348f5e8"
+            },
+            "require": {
+                "ext-hash": "*",
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "hyperf/config": "^3.0",
+                "hyperf/stringable": "^3.0",
+                "hyperf/tappable": "^3.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "SwooleTW\\Hyperf\\Encryption\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-main": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SwooleTW\\Hyperf\\Encryption\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@pm.me",
+                    "homepage": "https://albert-chen.com"
+                }
+            ],
+            "description": "The encryption package for Hyperf.",
+            "keywords": [
+                "encryption",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "issues": "https://github.com/swooletw/hyperf-packages/issues",
+                "source": "https://github.com/swooletw/hyperf-packages"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "swooletw/hyperf-hashing",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "../framework/src/hashing",
+                "reference": "58e7c923219b650374643fe34153c1e029a450d2"
+            },
+            "require": {
+                "hyperf/config": "^3.0",
+                "hyperf/context": "^3.0",
+                "hyperf/support": "^3.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "SwooleTW\\Hyperf\\Hashing\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-main": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SwooleTW\\Hyperf\\Hashing\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@pm.me",
+                    "homepage": "https://albert-chen.com"
+                }
+            ],
+            "description": "The hashing package for Hyperf.",
+            "keywords": [
+                "hashing",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "issues": "https://github.com/swooletw/hyperf-packages/issues",
+                "source": "https://github.com/swooletw/hyperf-packages"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "swooletw/hyperf-log",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "../framework/src/log",
+                "reference": "0609105662db05d1dadc03b3fb429c3c8dd0b3d4"
+            },
+            "require": {
+                "hyperf/config": "^3.0",
+                "hyperf/contract": "^3.0",
+                "hyperf/stringable": "^3.0",
+                "monolog/monolog": "^3.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "SwooleTW\\Hyperf\\Log\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-main": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SwooleTW\\Hyperf\\Log\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@pm.me",
+                    "homepage": "https://albert-chen.com"
+                }
+            ],
+            "description": "The log package for Hyperf.",
+            "keywords": [
+                "hyperf",
+                "log",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "issues": "https://github.com/swooletw/hyperf-packages/issues",
+                "source": "https://github.com/swooletw/hyperf-packages"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "swooletw/hyperf-support",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "../framework/src/support",
+                "reference": "f75d1e2d845189afb13e8a6d7860601f438142fd"
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SwooleTW\\Hyperf\\Support\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@pm.me",
+                    "homepage": "https://albert-chen.com"
+                }
+            ],
+            "description": "The Support package for Hyperf.",
+            "support": {
+                "issues": "https://github.com/swooletw/hyperf-packages/issues",
+                "source": "https://github.com/swooletw/hyperf-packages"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "symfony/console",
@@ -8581,7 +8973,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "swooletw/hyperf-container": 20,
+        "swooletw/hyperf-encryption": 20,
+        "swooletw/hyperf-hashing": 20,
+        "swooletw/hyperf-log": 20,
+        "swooletw/hyperf-support": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
