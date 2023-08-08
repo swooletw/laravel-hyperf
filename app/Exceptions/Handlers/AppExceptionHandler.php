@@ -33,7 +33,7 @@ class AppExceptionHandler extends ExceptionHandler
             'message' => $this->getMessage($throwable),
         ];
 
-        if (config('app.debug') && config('app.env') !== 'testing') {
+        if (environment()->isDebug() && ! environment()->isTesting()) {
             $e = FlattenException::createFromThrowable($throwable);
             $result['trace'] = $e->getTrace();
         }

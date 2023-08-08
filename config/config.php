@@ -14,7 +14,7 @@ use Psr\Log\LogLevel;
 
 return [
     'app_name' => env('APP_NAME', 'Hyperf'),
-    'app_env' => environment()->get(),
+    'app_env' => $env = environment()->get(),
     'scan_cacheable' => env('SCAN_CACHEABLE', false),
     StdoutLoggerInterface::class => [
         'log_level' => [
