@@ -32,7 +32,7 @@ return [
         ],
         'commands' => [
             'gen:model' => [
-                'path' => 'app/Model',
+                'path' => 'app/Models',
                 'force_casts' => true,
                 'inheritance' => 'Model',
             ],
