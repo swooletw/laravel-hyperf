@@ -12,6 +12,7 @@ declare(strict_types=1);
 use Hyperf\Context\ApplicationContext;
 use Hyperf\Di\Definition\DefinitionSourceFactory;
 use SwooleTW\Hyperf\Container\Container;
+use SwooleTW\Hyperf\Foundation\ProvidersLoader;
 
 /**
  * Initialize a dependency injection container that implemented PSR-11 and return the container.
@@ -19,5 +20,7 @@ use SwooleTW\Hyperf\Container\Container;
 $container = ApplicationContext::setContainer(
     new Container((new DefinitionSourceFactory())())
 );
+(new ProvidersLoader($container))
+    ->load();
 
 return $container;

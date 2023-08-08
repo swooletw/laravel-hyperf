@@ -27,7 +27,7 @@ return [
     |
     */
 
-    'env' => $env = env('APP_ENV', 'dev'),
+    'env' => environment()->get(),
 
     /*
     |--------------------------------------------------------------------------
@@ -81,10 +81,26 @@ return [
 
     'locale' => 'zh-CN',
 
-    'is_testing' => $env === 'testing',
+    'providers' => [
+        SwooleTW\Hyperf\Foundation\Providers\FoundationServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+    ],
 
-    'is_local' => $env == 'local',
-
-    'is_production' => $env === 'production',
+    'aliases' => [
+        'App' => SwooleTW\Hyperf\Support\Facades\App::class,
+        'Cache' => SwooleTW\Hyperf\Support\Facades\Cache::class,
+        'Config' => SwooleTW\Hyperf\Support\Facades\Config::class,
+        'Cookie' => SwooleTW\Hyperf\Support\Facades\Cookie::class,
+        'Crypt' => SwooleTW\Hyperf\Support\Facades\Crypt::class,
+        'DB' => SwooleTW\Hyperf\Support\Facades\DB::class,
+        'File' => SwooleTW\Hyperf\Support\Facades\File::class,
+        'Log' => SwooleTW\Hyperf\Support\Facades\Log::class,
+        'Request' => SwooleTW\Hyperf\Support\Facades\Request::class,
+        'Response' => SwooleTW\Hyperf\Support\Facades\Response::class,
+        'Translator' => SwooleTW\Hyperf\Support\Facades\Translator::class,
+        'Validator' => SwooleTW\Hyperf\Support\Facades\Validator::class,
+        'Auth' => SwooleTW\Hyperf\Support\Facades\Auth::class,
+        'Hash' => SwooleTW\Hyperf\Support\Facades\Hash::class,
+    ],
 ];
-
