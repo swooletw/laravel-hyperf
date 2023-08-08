@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use function Hyperf\Support\env;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;

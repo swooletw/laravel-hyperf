@@ -9,9 +9,9 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-use function Hyperf\Support\env;
-
 return [
+    'connection' => env('DB_CONNECTION', 'default'),
+
     'default' => [
         'driver' => env('DB_DRIVER', 'mysql'),
         'host' => env('DB_HOST', 'localhost'),
@@ -37,5 +37,20 @@ return [
                 'inheritance' => 'Model',
             ],
         ],
+    ],
+
+    'sqlite' => [
+        'driver' => 'sqlite',
+        'url' => env('DATABASE_URL'),
+        'database' => env('DB_DATABASE', database_path('database.sqlite')),
+        'prefix' => '',
+        'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+    ],
+
+    'sqlite_testing' => [
+        'driver' => 'sqlite',
+        'database' => ':memory:',
+        'prefix' => '',
+        'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
     ],
 ];
