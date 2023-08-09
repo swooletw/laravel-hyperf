@@ -11,9 +11,8 @@ declare(strict_types=1);
  */
 namespace Hyperf\Database\Commands\Migrations;
 
+use Hyperf\Collection\Collection;
 use Hyperf\Command\Command;
-
-use function Hyperf\Collection\collect;
 
 abstract class BaseCommand extends Command
 {
@@ -26,7 +25,7 @@ abstract class BaseCommand extends Command
         // use the path relative to the root of the installation folder so our database
         // migrations may be run for any customized path from within the application.
         if ($this->input->hasOption('path') && $this->input->getOption('path')) {
-            return collect($this->input->getOption('path'))->map(function ($path) {
+            return Collection::make($this->input->getOption('path'))->map(function ($path) {
                 return ! $this->usingRealPath()
                                 ? BASE_PATH . DIRECTORY_SEPARATOR . $path
                                 : $path;

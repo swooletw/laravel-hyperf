@@ -100,7 +100,9 @@ return [
         'Response' => SwooleTW\Hyperf\Support\Facades\Response::class,
         'Translator' => SwooleTW\Hyperf\Support\Facades\Translator::class,
         'Validator' => SwooleTW\Hyperf\Support\Facades\Validator::class,
+        'JWT' => SwooleTW\Hyperf\Support\Facades\JWT::class,
         'Auth' => SwooleTW\Hyperf\Support\Facades\Auth::class,
         'Hash' => SwooleTW\Hyperf\Support\Facades\Hash::class,
+        'Environment' => SwooleTW\Hyperf\Support\Facades\Environment::class,
     ],
 ];
