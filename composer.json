@@ -35,6 +35,7 @@
         "swooletw/hyperf-auth": "@dev",
         "swooletw/hyperf-cache": "@dev",
         "swooletw/hyperf-container": "@dev",
+        "swooletw/hyperf-cookie": "@dev",
         "swooletw/hyperf-encryption": "@dev",
         "swooletw/hyperf-foundation": "@dev",
         "swooletw/hyperf-hashing": "@dev",

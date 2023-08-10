@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c09d456b3a0e23a06a810ee76782241",
+    "content-hash": "e8833ec725294340d846ea558ae908d8",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -4789,6 +4789,59 @@
             }
         },
         {
+            "name": "swooletw/hyperf-cookie",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../framework/src/cookie",
+                "reference": "0001d488c5fad9eaf87bf6c6348e66dde78f2bb5"
+            },
+            "require": {
+                "hyperf/context": "^3.1",
+                "hyperf/http-message": "^3.1",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "SwooleTW\\Hyperf\\Cookie\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-main": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SwooleTW\\Hyperf\\Cookie\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@pm.me",
+                    "homepage": "https://albert-chen.com"
+                }
+            ],
+            "description": "The cookie package for Hyperf.",
+            "keywords": [
+                "cookie",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "support": {
+                "issues": "https://github.com/swooletw/hyperf-packages/issues",
+                "source": "https://github.com/swooletw/hyperf-packages"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "swooletw/hyperf-encryption",
             "version": "dev-master",
             "dist": {
@@ -4977,7 +5030,7 @@
             "dist": {
                 "type": "path",
                 "url": "../framework/src/jwt",
-                "reference": "a3ed07f5f2ca91b50c6deb94fa7aef20e7eaa233"
+                "reference": "ad7726d8f3e16a0ea3ca41924c07a40a4ae7cc13"
             },
             "require": {
                 "hyperf/collection": "^3.1",
@@ -4985,7 +5038,8 @@
                 "lcobucci/jwt": "^5.0",
                 "nesbot/carbon": "^2.16",
                 "php": "^8.1",
-                "psr/simple-cache": "^3.0"
+                "psr/simple-cache": "^3.0",
+                "swooletw/hyperf-cache": "^3.1|dev-master"
             },
             "type": "library",
             "extra": {
@@ -9736,6 +9790,7 @@
         "swooletw/hyperf-auth": 20,
         "swooletw/hyperf-cache": 20,
         "swooletw/hyperf-container": 20,
+        "swooletw/hyperf-cookie": 20,
         "swooletw/hyperf-encryption": 20,
         "swooletw/hyperf-foundation": 20,
         "swooletw/hyperf-hashing": 20,
