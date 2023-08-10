@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8833ec725294340d846ea558ae908d8",
+    "content-hash": "4a72df0012c47afdecea1cc1d2dc7f65",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -414,6 +414,61 @@
                 "source": "https://github.com/php-fig/http-message-util/tree/1.1.5"
             },
             "time": "2020-11-24T22:02:12+00:00"
+        },
+        {
+            "name": "friendsofhyperf/model-observer",
+            "version": "v3.1.0-beta.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/friendsofhyperf/model-observer.git",
+                "reference": "0101d7d7019257c8f9b1350b1e3cae93dca0b354"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/friendsofhyperf/model-observer/zipball/0101d7d7019257c8f9b1350b1e3cae93dca0b354",
+                "reference": "0101d7d7019257c8f9b1350b1e3cae93dca0b354",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/code-parser": "~3.1.0",
+                "hyperf/command": "~3.1.0",
+                "hyperf/context": "~3.1.0",
+                "hyperf/di": "~3.1.0",
+                "hyperf/event": "~3.1.0"
+            },
+            "suggest": {
+                "hyperf/database": "Required to use (~3.1.0)"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "FriendsOfHyperf\\ModelObserver\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-main": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfHyperf\\ModelObserver\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "huangdijia",
+                    "email": "huangdijia@gmail.com"
+                }
+            ],
+            "description": "The model observer component for Hyperf.",
+            "support": {
+                "issues": "https://github.com/friendsofhyperf/components/issues",
+                "source": "https://github.com/friendsofhyperf/components"
+            },
+            "time": "2023-07-18T10:00:33+00:00"
         },
         {
             "name": "friendsofhyperf/tinker",
@@ -7360,6 +7415,61 @@
                 "source": "https://github.com/hyperf/testing/tree/v3.1.0-beta.8"
             },
             "time": "2023-07-21T03:40:35+00:00"
+        },
+        {
+            "name": "hyperf/watcher",
+            "version": "v3.1.0-beta.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/watcher.git",
+                "reference": "e455a4d801753a3e89dc9190a0b38cd9cb32accc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/watcher/zipball/e455a4d801753a3e89dc9190a0b38cd9cb32accc",
+                "reference": "e455a4d801753a3e89dc9190a0b38cd9cb32accc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-posix": "*",
+                "hyperf/codec": "~3.1.0",
+                "hyperf/command": "~3.1.0",
+                "hyperf/di": "~3.1.0",
+                "hyperf/framework": "~3.1.0",
+                "hyperf/support": "~3.1.0",
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\Watcher\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Functions.php"
+                ],
+                "psr-4": {
+                    "Hyperf\\Watcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Hot reload watcher for Hyperf",
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/watcher/issues",
+                "source": "https://github.com/hyperf/watcher/tree/v3.1.0-beta.10"
+            },
+            "time": "2023-08-09T03:33:15+00:00"
         },
         {
             "name": "mockery/mockery",

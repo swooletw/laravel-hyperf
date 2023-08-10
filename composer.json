@@ -13,6 +13,7 @@
     "license": "Apache-2.0",
     "require": {
         "php": ">=8.0",
+        "friendsofhyperf/model-observer": "^3.0",
         "friendsofhyperf/tinker": "^3.1",
         "hyperf/async-queue": "^3.0",
         "hyperf/cache": "~3.1.0",
@@ -51,6 +52,7 @@
         "friendsofphp/php-cs-fixer": "^3.1",
         "hyperf/devtool": "~3.1.0",
         "hyperf/testing": "~3.1.0",
+        "hyperf/watcher": "^3.0",
         "mockery/mockery": "^1.0",
         "phpstan/phpstan": "^1.0",
         "swoole/ide-helper": "^5.0"
