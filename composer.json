@@ -110,6 +110,7 @@
             "rm -rf runtime/container"
         ],
         "test": "co-phpunit --prepend tests/bootstrap.php -c phpunit.xml --colors=always",
+        "cs-diff": "php-cs-fixer fix --path-mode=intersection `git diff --name-only --diff-filter=ACMRTUXB origin/master..HEAD`",
         "cs-fix": "php-cs-fixer fix $1",
         "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./app ./config",
         "start": [

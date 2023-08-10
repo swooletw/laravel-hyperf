@@ -9,14 +9,6 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-$header = <<<'EOF'
-This file is part of Hyperf.
-
-@link     https://www.hyperf.io
-@document https://hyperf.wiki
-@contact  group@hyperf.io
-@license  https://github.com/hyperf/hyperf/blob/master/LICENSE
-EOF;
 
 return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
@@ -25,12 +17,6 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
         '@DoctrineAnnotation' => true,
         '@PhpCsFixer' => true,
-        'header_comment' => [
-            'comment_type' => 'PHPDoc',
-            'header' => $header,
-            'separate' => 'none',
-            'location' => 'after_declare_strict',
-        ],
         'array_syntax' => [
             'syntax' => 'short',
         ],
