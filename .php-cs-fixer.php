@@ -17,6 +17,7 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
         '@DoctrineAnnotation' => true,
         '@PhpCsFixer' => true,
+        'phpdoc_no_alias_tag' => false,
         'array_syntax' => [
             'syntax' => 'short',
         ],
@@ -85,6 +86,7 @@ return (new PhpCsFixer\Config())
         PhpCsFixer\Finder::create()
             ->exclude('public')
             ->exclude('runtime')
+            ->exclude('storage')
             ->exclude('vendor')
             ->in(__DIR__)
     )
