@@ -66,15 +66,11 @@
     },
     "autoload": {
         "exclude-from-classmap": [
-            "vendor/hyperf/di/src/Container.php",
-            "vendor/hyperf/database/src/Commands/Migrations/BaseCommand.php",
-            "vendor/hyperf/database/src/Commands/Seeders/BaseCommand.php",
-            "vendor/hyperf/database/src/Migrations/Migration.php"
+            "vendor/hyperf/di/src/Container.php"
         ],
         "psr-4": {
             "App\\": "app/",
-            "Hyperf\\Di\\": "overrides/Hyperf/Di/",
-            "Hyperf\\Database\\": "overrides/Hyperf/Database/"
+            "Hyperf\\Di\\": "overrides/Hyperf/Di/"
         },
         "files": []
     },
