@@ -10,8 +10,8 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 use Hyperf\Context\ApplicationContext;
-use Hyperf\Di\Definition\DefinitionSourceFactory;
 use SwooleTW\Hyperf\Container\Container;
+use SwooleTW\Hyperf\Container\DefinitionSourceFactory;
 use SwooleTW\Hyperf\Foundation\ProvidersLoader;
 
 /**
