@@ -83,6 +83,7 @@ return [
 
     'providers' => [
         SwooleTW\Hyperf\Foundation\Providers\FoundationServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
     ],
