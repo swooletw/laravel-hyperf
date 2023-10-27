@@ -12,6 +12,7 @@ declare(strict_types=1);
 return [
     'handler' => [
         'http' => [
+            SwooleTW\Hyperf\Foundation\Exceptions\Handlers\HttpExceptionHandler::class,
             App\Exceptions\Handlers\AppExceptionHandler::class,
         ],
     ],
