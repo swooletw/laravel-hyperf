@@ -3,7 +3,9 @@
 declare(strict_types=1);
 
 use Hyperf\Stringable\Str;
-use Hyperf\Support\env;
+use SwooleTW\Hyperf\Cache\SwooleStore;
+
+use function Hyperf\Support\env;
 
 return [
     /*
@@ -28,8 +30,7 @@ return [
     | well as their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
-    | Supported drivers: "apc", "array", "database", "file",
-    |            "memcached", "redis", "dynamodb", "null"
+    | Supported drivers: "array", "file", "redis", "swoole", "stack", "null"
     |
     */
 
@@ -42,12 +43,40 @@ return [
         'file' => [
             'driver' => 'file',
             'path' => BASE_PATH . '/storage/cache/data',
+            'lock_path' => BASE_PATH . '/storage/cache/data',
         ],
 
         'redis' => [
             'driver' => 'redis',
             'connection' => 'default',
             'lock_connection' => 'default',
+        ],
+
+        'swoole' => [
+            'driver' => 'swoole',
+            'table' => 'default',
+            'memory_limit_buffer' => 0.05,
+            'eviction_policy' => SwooleStore::EVICTION_POLICY_LRU,
+            'eviction_proportion' => 0.05,
+            'eviction_interval' => 10000, // milliseconds
+        ],
+
+        'stack' => [
+            'driver' => 'stack',
+            'stores' => [
+                'swoole' => [
+                    'max_ttl' => 3, // seconds
+                ],
+                'redis',
+            ],
+        ],
+    ],
+
+    'swoole_tables' => [
+        'default' => [
+            'rows' => 1024,
+            'bytes' => 10240,
+            'conflict_proportion' => 0.2,
         ],
     ],
 
