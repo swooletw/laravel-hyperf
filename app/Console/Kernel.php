@@ -20,4 +20,11 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('demo:hi --name=Hyperf')->everyFiveSeconds();
     }
+
+    public function commands(): void
+    {
+        $this->load(__DIR__ . '/Commands');
+
+        require base_path('routes/console.php');
+    }
 }
