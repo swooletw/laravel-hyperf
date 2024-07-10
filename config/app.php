@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Hyperf'),
+    'name' => env('APP_NAME', 'Laravel Hyperf'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +66,7 @@ return [
     |
     */
 
-    'timezone' => 'Asia/Taipei',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ return [
     |
     */
 
-    'locale' => 'zh-CN',
+    'locale' => 'en',
 
     'providers' => [
         SwooleTW\Hyperf\Foundation\Providers\FoundationServiceProvider::class,
@@ -90,6 +90,7 @@ return [
 
     'aliases' => [
         'App' => SwooleTW\Hyperf\Support\Facades\App::class,
+        'Artisan' => SwooleTW\Hyperf\Support\Facades\Artisan::class,
         'Cache' => SwooleTW\Hyperf\Support\Facades\Cache::class,
         'Config' => SwooleTW\Hyperf\Support\Facades\Config::class,
         'Cookie' => SwooleTW\Hyperf\Support\Facades\Cookie::class,
