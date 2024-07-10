@@ -12,6 +12,10 @@ declare(strict_types=1);
 use Hyperf\Contract\StdoutLoggerInterface;
 use Psr\Log\LogLevel;
 
+/*
+ * This file is kept for original config structure in Hyperf framework.
+ * All the configs here will not include any prefixes.
+ */
 return [
     'app_name' => env('APP_NAME', 'Hyperf'),
     'app_env' => $env = environment()->get(),
