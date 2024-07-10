@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Hyperf\Support\env;
+use function Hyperf\Support\env;
 
 return [
     /*
