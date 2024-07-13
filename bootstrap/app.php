@@ -13,9 +13,7 @@ declare(strict_types=1);
 |
 */
 
-$app = new SwooleTW\Hyperf\Foundation\Application(
-    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
-);
+$app = new SwooleTW\Hyperf\Foundation\Application();
 
 /*
 |--------------------------------------------------------------------------
