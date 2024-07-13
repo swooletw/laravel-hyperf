@@ -1,6 +1,7 @@
 <?php
 
-use SwooleTW\Hyperf\Foundation\Command\Console;
+use SwooleTW\Hyperf\Support\Facades\Artisan;
+use SwooleTW\Hyperf\Support\Facades\Schedule;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use SwooleTW\Hyperf\Foundation\Command\Console;
 |
 */
 
-Console::command('hello', function () {
+Artisan::command('hello', function () {
     $this->comment('Laravel-Hyperf is awesome!');
 })->describe('This is a demo closure command.');
+
+// Schedule::command('hello')->everyFiveSeconds();

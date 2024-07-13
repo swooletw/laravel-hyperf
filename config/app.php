@@ -106,5 +106,6 @@ return [
         'Auth' => SwooleTW\Hyperf\Support\Facades\Auth::class,
         'Hash' => SwooleTW\Hyperf\Support\Facades\Hash::class,
         'Environment' => SwooleTW\Hyperf\Support\Facades\Environment::class,
+        'Schedule' => SwooleTW\Hyperf\Support\Facades\Schedule::class,
     ],
 ];
