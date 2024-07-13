@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Psr\Log\LogLevel;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -41,6 +43,38 @@ return [
     */
 
     'debug' => environment()->isDebug(),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Cacheable Flag for Annotations Scanning
+    |--------------------------------------------------------------------------
+    |
+    | Enabling this option will cache the annotations scanning result. It
+    | can boost the performance of the framework initialization.
+    | Please disable it in the development environment.
+    |
+    */
+    'scan_cacheable' => env('SCAN_CACHEABLE', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Log Levels for StdoutLogger
+    |--------------------------------------------------------------------------
+    |
+    | This value only determines the log levels that are written to the stdout logger.
+    | It does not affect the log levels that are written to the other loggers.
+    |
+    */
+    'stdout_log_level' => [
+        LogLevel::ALERT,
+        LogLevel::CRITICAL,
+        // LogLevel::DEBUG,
+        LogLevel::EMERGENCY,
+        LogLevel::ERROR,
+        LogLevel::INFO,
+        LogLevel::NOTICE,
+        LogLevel::WARNING,
+    ],
 
     /*
     |--------------------------------------------------------------------------
