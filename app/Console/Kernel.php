@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
      */
     public function schedule(Schedule $schedule): void
     {
-        // $schedule->command('demo:hi --name=Hyperf')->everyFiveSeconds();
+        // $schedule->command('demo:hi')->everyFiveSeconds();
     }
 
     public function commands(): void

@@ -85,6 +85,7 @@ return [
     | when errors occur in the command line.
     |
     */
+
     'command_debug_enabled' => env('COMMAND_DEBUG_ENABLED', false),
 
     /*
