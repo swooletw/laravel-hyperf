@@ -78,6 +78,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Debug Mode for Command Errors
+    |--------------------------------------------------------------------------
+    |
+    | This value determines whether the stack strace will be displayed
+    | when errors occur in the command line.
+    |
+    */
+    'command_debug_enabled' => env('COMMAND_DEBUG_ENABLED', false),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application URL
     |--------------------------------------------------------------------------
     |

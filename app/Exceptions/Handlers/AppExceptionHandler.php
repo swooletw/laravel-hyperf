@@ -11,7 +11,6 @@ declare(strict_types=1);
  */
 namespace App\Exceptions\Handlers;
 
-use function Hyperf\Config\config;
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Exception\HttpException;
 use Psr\Http\Message\ResponseInterface;
