@@ -11,7 +11,7 @@ declare(strict_types=1);
  */
 namespace App\Models;
 
-use Hyperf\DbConnection\Model\Model as BaseModel;
+use SwooleTW\Hyperf\Foundation\Model\Model as BaseModel;
 
 abstract class Model extends BaseModel
 {

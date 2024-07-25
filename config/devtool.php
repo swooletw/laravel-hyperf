@@ -40,5 +40,11 @@ return [
         'Process' => [
             'namespace' => 'App\\Processes',
         ],
+        'model' => [
+            'path' => 'app/Models',
+            'force_casts' => true,
+            'inheritance' => 'Model',
+            'uses' => App\Models\Model::class,
+        ],
     ],
 ];
