@@ -23,4 +23,6 @@ require BASE_PATH . '/vendor/autoload.php';
 
 Hyperf\Di\ClassLoader::init();
 
-require BASE_PATH . '/bootstrap/app.php';
+$app = require BASE_PATH . '/bootstrap/app.php';
+
+$app->get(Hyperf\Contract\ApplicationInterface::class);
