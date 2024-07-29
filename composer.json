@@ -16,6 +16,7 @@
         "friendsofhyperf/model-observer": "~3.1.0",
         "friendsofhyperf/pretty-console": "~3.1.0",
         "friendsofhyperf/tinker": "~3.1.0",
+        "hyperf/database-sqlite": "~3.1.0",
         "hyperf/paginator": "~3.1.0",
         "hyperf/redis": "~3.1.0",
         "hyperf/validation": "~3.1.0",
