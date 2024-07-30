@@ -13,22 +13,18 @@ namespace App\Listeners;
 
 use Hyperf\Collection\Arr;
 use Hyperf\Database\Events\QueryExecuted;
-use Hyperf\Event\Annotation\Listener;
 use Hyperf\Event\Contract\ListenerInterface;
-use Hyperf\Logger\LoggerFactory;
+use Hyperf\Framework\Logger\StdoutLogger;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
 class DbQueryExecutedListener implements ListenerInterface
 {
-    /**
-     * @var LoggerInterface
-     */
-    private $logger;
+    private LoggerInterface $logger;
 
     public function __construct(ContainerInterface $container)
     {
-        $this->logger = $container->get(LoggerFactory::class)->get('sql');
+        $this->logger = $container->get(StdoutLogger::class);
     }
 
     public function listen(): array
