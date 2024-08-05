@@ -13,6 +13,7 @@ namespace App\Exceptions\Handlers;
 
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Exception\HttpException;
+use Hyperf\Validation\ValidationException;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Throwable;
@@ -37,7 +38,9 @@ class AppExceptionHandler extends ExceptionHandler
             $result['trace'] = $e->getTrace();
         }
 
-        // $this->stopPropagation();
+        if ($throwable instanceof ValidationException) {
+            $this->stopPropagation();
+        }
 
         return $response
             ->withStatus($code)
@@ -61,6 +64,10 @@ class AppExceptionHandler extends ExceptionHandler
 
     protected function getMessage(Throwable $e): string
     {
+        if ($e instanceof ValidationException) {
+            return $e->validator->errors()->first();
+        }
+
         $message = $message = $e->getMessage() ?? null;
         if (! $message && $previous = $e->getPrevious()) {
             $message = $previous->getMessage() ?? null;

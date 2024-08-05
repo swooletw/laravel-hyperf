@@ -132,6 +132,7 @@ return [
 
     'providers' => [
         SwooleTW\Hyperf\Foundation\Providers\FoundationServiceProvider::class,
+        SwooleTW\Hyperf\Foundation\Providers\FormRequestServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,

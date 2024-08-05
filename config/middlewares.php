@@ -11,7 +11,7 @@ declare(strict_types=1);
  */
 return [
     'http' => [
-        App\Http\Middleware\ValidationMiddleware::class,
         // SwooleTW\Hyperf\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        // App\Http\Middleware\DemoMiddleware::class,
     ],
 ];

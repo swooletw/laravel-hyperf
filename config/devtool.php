@@ -13,32 +13,35 @@ return [
     'generator' => [
         'amqp' => [
             'consumer' => [
-                'namespace' => 'App\\Amqp\\Consumer',
+                'namespace' => 'App\\Amqp\\Consumers',
             ],
             'producer' => [
-                'namespace' => 'App\\Amqp\\Producer',
+                'namespace' => 'App\\Amqp\\Producers',
             ],
         ],
         'aspect' => [
-            'namespace' => 'App\\Aspect',
+            'namespace' => 'App\\Aspects',
         ],
         'command' => [
-            'namespace' => 'App\\Command',
+            'namespace' => 'App\\Console\\Commands',
         ],
         'controller' => [
-            'namespace' => 'App\\Controller',
+            'namespace' => 'App\\Http\\Controllers',
         ],
         'job' => [
-            'namespace' => 'App\\Job',
+            'namespace' => 'App\\Jobs',
         ],
         'listener' => [
-            'namespace' => 'App\\Listener',
+            'namespace' => 'App\\Listeners',
         ],
         'middleware' => [
-            'namespace' => 'App\\Middleware',
+            'namespace' => 'App\\Http\\Middleware',
         ],
-        'Process' => [
+        'process' => [
             'namespace' => 'App\\Processes',
+        ],
+        'request' => [
+            'namespace' => 'App\\Http\\Requests',
         ],
         'model' => [
             'path' => 'app/Models',
