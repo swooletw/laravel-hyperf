@@ -32,6 +32,8 @@ return [
         'http' => HttpKernel::class,
     ],
     'settings' => [
+        'document_root' => BASE_PATH . '/public',
+        'enable_static_handler' => true,
         Constant::OPTION_ENABLE_COROUTINE => true,
         Constant::OPTION_WORKER_NUM => swoole_cpu_num(),
         Constant::OPTION_PID_FILE => BASE_PATH . '/runtime/hyperf.pid',

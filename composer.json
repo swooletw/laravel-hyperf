@@ -16,14 +16,15 @@
         "friendsofhyperf/model-observer": "~3.1.0",
         "friendsofhyperf/pretty-console": "~3.1.0",
         "friendsofhyperf/tinker": "~3.1.0",
-        "hyperf/database-sqlite": "~3.1.0",
         "hyperf/paginator": "~3.1.0",
         "hyperf/redis": "~3.1.0",
         "hyperf/validation": "~3.1.0",
+        "hyperf/view": "~3.1.0",
+        "hyperf/view-engine": "^3.1",
         "swooletw/hyperf-packages": "@dev"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
+        "fakerphp/faker": "^2.0",
         "friendsofphp/php-cs-fixer": "3.35.1",
         "hyperf/devtool": "~3.1.0",
         "hyperf/testing": "~3.1.0",
