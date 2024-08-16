@@ -26,13 +26,13 @@ class Kernel extends HttpKernel
      */
     protected array $middlewareGroups = [
         'web' => [
-            \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
+            // \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
             // \SwooleTW\Hyperf\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         ],
 
         'api' => [
-            'throttle:60,1,api',
-            \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
+            // 'throttle:60,1,api',
+            // \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
         ],
     ];
 
@@ -45,6 +45,7 @@ class Kernel extends HttpKernel
      */
     protected array $middlewareAliases = [
         'throttle' => \SwooleTW\Hyperf\Router\Middleware\ThrottleRequests::class,
+        'bindings' => \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
     ];
 
     /**
@@ -55,7 +56,7 @@ class Kernel extends HttpKernel
      * @var string[]
      */
     protected array $middlewarePriority = [
-        \SwooleTW\Hyperf\Router\Middleware\ThrottleRequests::class,
-        \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
+        // \SwooleTW\Hyperf\Router\Middleware\ThrottleRequests::class,
+        // \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
     ];
 }
