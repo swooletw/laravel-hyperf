@@ -10,7 +10,7 @@ class ExampleTest extends TestCase
 {
     public function testTheApplicationReturnsSuccessfulResponse()
     {
-        $response = $this->get('/')
+        $this->get('/')
             ->assertSuccessful();
     }
 }
