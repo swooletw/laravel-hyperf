@@ -11,21 +11,22 @@ declare(strict_types=1);
  */
 namespace App\Exceptions\Handlers;
 
-use Hyperf\ExceptionHandler\ExceptionHandler;
+use Hyperf\Context\RequestContext;
 use Hyperf\HttpMessage\Exception\HttpException;
 use Hyperf\Validation\ValidationException;
 use Psr\Http\Message\ResponseInterface;
+use SwooleTW\Hyperf\Foundation\Exceptions\Handlers\HttpExceptionHandler;
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Throwable;
 
-class AppExceptionHandler extends ExceptionHandler
+class ApiExceptionHandler extends HttpExceptionHandler
 {
     protected array $statusCodeMapping = [
         \Hyperf\Validation\UnauthorizedException::class => 403,
         \Hyperf\Validation\ValidationException::class => 422,
     ];
 
-    public function handle(Throwable $throwable, ResponseInterface $response)
+    public function handle(Throwable $throwable, ResponseInterface $response): ResponseInterface
     {
         $result = [
             'code' => $code = $this->getStatusCode($throwable),
@@ -38,11 +39,9 @@ class AppExceptionHandler extends ExceptionHandler
             $result['trace'] = $e->getTrace();
         }
 
-        if ($throwable instanceof ValidationException) {
-            $this->stopPropagation();
-        }
+        $this->stopPropagation();
 
-        return $response
+        return parent::handle($throwable, $response)
             ->withStatus($code)
             ->withHeader('Content-Type', 'application/json')
             ->withContent(json_encode($result));
@@ -50,7 +49,10 @@ class AppExceptionHandler extends ExceptionHandler
 
     public function isValid(Throwable $throwable): bool
     {
-        return true;
+        return str_starts_with(
+            RequestContext::get()->getUri()->getPath(),
+            '/api/'
+        );
     }
 
     protected function getStatusCode(Throwable $e): int
