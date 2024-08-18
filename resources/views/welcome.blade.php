@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Hyperf</title>
+    <title>Laravel Hyperf</title>
     <style>
         html,
         body {
@@ -69,9 +69,8 @@
 
             <div class="links">
                 <a href="https://laravel-hyperf.com" target="_blank">Laravel Hyperf</a>
-                <a href="https://hyperf.io" target="_blank">Hyperf Framework</a>
                 <a href="https://github.com/swooletw/laravel-hyperf" target="_blank">GitHub</a>
-                <a href="#" target="_blank">Donate</a>
+                <a href="https://hyperf.io" target="_blank">Hyperf Framework</a>
             </div>
         </div>
     </div>
