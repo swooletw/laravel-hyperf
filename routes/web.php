@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Hyperf\HttpServer\Router\Router;
+use SwooleTW\Hyperf\Support\Facades\Route;
 
-Router::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });

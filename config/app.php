@@ -150,6 +150,7 @@ return [
         'Log' => SwooleTW\Hyperf\Support\Facades\Log::class,
         'Request' => SwooleTW\Hyperf\Support\Facades\Request::class,
         'Response' => SwooleTW\Hyperf\Support\Facades\Response::class,
+        'Route' => SwooleTW\Hyperf\Support\Facades\Route::class,
         'Translator' => SwooleTW\Hyperf\Support\Facades\Translator::class,
         'Validator' => SwooleTW\Hyperf\Support\Facades\Validator::class,
         'JWT' => SwooleTW\Hyperf\Support\Facades\JWT::class,

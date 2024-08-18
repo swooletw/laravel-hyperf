@@ -3,6 +3,6 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\IndexController;
-use Hyperf\HttpServer\Router\Router;
+use SwooleTW\Hyperf\Support\Facades\Route;
 
-Router::any('/', [IndexController::class, 'index']);
+Route::any('/', [IndexController::class, 'index']);
