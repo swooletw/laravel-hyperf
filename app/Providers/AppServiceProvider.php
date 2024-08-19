@@ -17,9 +17,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        //
     }
-
 
     protected function addGracefulSignalHandlers(): void
     {

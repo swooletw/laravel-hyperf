@@ -8,6 +8,10 @@ use App\Models\User;
 use SwooleTW\Hyperf\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class RefreshDatabaseTest extends TestCase
 {
     use RefreshDatabase;

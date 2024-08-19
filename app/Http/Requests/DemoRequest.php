@@ -22,7 +22,6 @@ class DemoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
         ];
     }
 }

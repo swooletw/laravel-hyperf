@@ -5,7 +5,6 @@ declare(strict_types=1);
 use function Hyperf\Support\env;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Hash Driver
@@ -52,5 +51,4 @@ return [
         'threads' => 1,
         'time' => 4,
     ],
-
 ];

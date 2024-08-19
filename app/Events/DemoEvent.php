@@ -6,5 +6,4 @@ namespace App\Events;
 
 class DemoEvent
 {
-    //
 }

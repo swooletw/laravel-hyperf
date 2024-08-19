@@ -10,13 +10,10 @@ class EventServiceProvider extends BaseServiceProvider
 {
     /**
      * The event listener mappings for the application.
-     *
-     * @var array
      */
     protected array $listen = [
         \App\Events\DemoEvent::class => [
             \App\Listeners\DemoListener::class,
         ],
-        //
     ];
 }

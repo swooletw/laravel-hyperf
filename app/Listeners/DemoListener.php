@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Listeners;
 
-use SwooleTW\Hyperf\Foundation\Contracts\Queue\Queueable;
 use SwooleTW\Hyperf\Support\Facades\Log;
 
 class DemoListener

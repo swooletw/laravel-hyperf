@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Hyperf\Stringable\Str;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -82,7 +81,6 @@ return [
     */
 
     'redis' => [
-
         'options' => [
             'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'hyperf'), '_') . '_database_'),
         ],

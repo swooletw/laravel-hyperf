@@ -5,6 +5,11 @@ declare(strict_types=1);
 namespace Tests\Unit;
 
 use SwooleTW\Hyperf\Foundation\Testing\TestCase;
+
+/**
+ * @internal
+ * @coversNothing
+ */
 class ExampleTest extends TestCase
 {
     /**

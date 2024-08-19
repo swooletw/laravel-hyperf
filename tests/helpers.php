@@ -6,7 +6,7 @@ use Hyperf\Context\ApplicationContext;
 use Hyperf\Database\Model\Factory;
 
 /**
- * @return FactoryBuilder|null
+ * @return null|FactoryBuilder
  * @throws TypeError
  * @throws NotFoundExceptionInterface
  * @throws ContainerExceptionInterface

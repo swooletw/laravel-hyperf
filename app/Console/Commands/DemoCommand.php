@@ -9,6 +9,7 @@ use SwooleTW\Hyperf\Foundation\Console\Command;
 class DemoCommand extends Command
 {
     protected ?string $signature = 'demo:hi {--name= : name}';
+
     protected string $description = 'Hyperf Demo Command';
 
     public function handle()

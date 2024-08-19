@@ -8,5 +8,4 @@ declare(strict_types=1);
  * This file is only kept for the compatibility for root config design in Hyperf framework.
  */
 return [
-    //
 ];
