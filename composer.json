@@ -13,6 +13,7 @@
     "license": "Apache-2.0",
     "require": {
         "php": ">=8.1",
+        "friendsofhyperf/http-client": "^3.1",
         "friendsofhyperf/model-observer": "~3.1.0",
         "friendsofhyperf/pretty-console": "~3.1.0",
         "friendsofhyperf/tinker": "~3.1.0",
