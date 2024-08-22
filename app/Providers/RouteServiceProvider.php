@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Hyperf\HttpServer\Router\DispatcherFactory;
 use SwooleTW\Hyperf\Foundation\Support\Providers\RouteServiceProvider as BaseServiceProvider;
 use SwooleTW\Hyperf\Support\Facades\Route;
 
