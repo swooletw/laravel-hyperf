@@ -18,15 +18,17 @@ class RouteServiceProvider extends BaseServiceProvider
 
     public function boot(): void
     {
+        parent::boot();
+
         Route::group(
             '/',
-            $this->registerRouteFile(base_path('routes/web.php')),
+            base_path('routes/web.php'),
             ['middleware' => 'web']
         );
 
         Route::group(
             '/api',
-            $this->registerRouteFile(base_path('routes/api.php')),
+            base_path('routes/api.php'),
             ['middleware' => 'api']
         );
     }
