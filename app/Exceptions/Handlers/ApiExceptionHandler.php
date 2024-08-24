@@ -42,10 +42,8 @@ class ApiExceptionHandler extends HttpExceptionHandler
 
     public function isValid(Throwable $throwable): bool
     {
-        return str_starts_with(
-            RequestContext::get()->getUri()->getPath(),
-            '/api/'
-        );
+        return str_starts_with($uri = RequestContext::get()->getUri()->getPath(), '/api')
+            && (strlen($uri) == 4 || $uri[4] === '/');
     }
 
     protected function getStatusCode(Throwable $e): int
