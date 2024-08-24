@@ -10,7 +10,7 @@
         "laravel"
     ],
     "description": "A Laravel styled framework skeleton based on powerful Hyperf framework.",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "require": {
         "php": ">=8.1",
         "friendsofhyperf/http-client": "^3.1",
