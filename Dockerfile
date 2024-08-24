@@ -5,17 +5,17 @@
 # @contact  group@hyperf.io
 # @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
 
-FROM hyperf/hyperf:8.0-alpine-v3.16-swoole
+FROM hyperf/hyperf:8.3-alpine-v3.19-swoole
 LABEL maintainer="Hyperf Developers <group@hyperf.io>" version="1.0" license="MIT" app.name="Hyperf"
 
 ##
 # ---------- env settings ----------
 ##
-# --build-arg timezone=Asia/Shanghai
+# --build-arg timezone=Asia/Taipei
 ARG timezone
 
-ENV TIMEZONE=${timezone:-"Asia/Shanghai"} \
-    APP_ENV=prod \
+ENV TIMEZONE=${timezone:-"Asia/Taipei"} \
+    APP_ENV=production \
     SCAN_CACHEABLE=(true)
 
 # update
@@ -47,8 +47,8 @@ WORKDIR /opt/www
 # RUN composer install --no-dev --no-scripts
 
 COPY . /opt/www
-RUN composer install --no-dev -o && php bin/hyperf.php
+RUN composer install --no-dev -o && php hyperf
 
 EXPOSE 9501
 
-ENTRYPOINT ["php", "/opt/www/bin/hyperf.php", "start"]
+ENTRYPOINT ["php", "/opt/www/hyperf", "start"]
