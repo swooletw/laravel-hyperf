@@ -24,8 +24,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Don't forget to set this in your .env file, as it will be used to sign
-    | your tokens. A helper command is provided for this:
-    | `php artisan jwt:secret`
+    | your tokens.
     |
     | Note: This will be used for Symmetric algorithms only (HMAC),
     | since RSA and ECDSA use a private/public key combo (See below).
