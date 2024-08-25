@@ -19,7 +19,7 @@ If your application relies heavily on slow I/O operations, you may still encount
 
 Imagine building an AI-powered chatbot where each conversation API takes 3-5 seconds to respond. If you have 10 workers in Laravel Octane and receive 10 concurrent requests, all workers would be occupied until these requests complete.
 
-> You can see [benchmark comparison](https://laravel-hyperf.com/doc/introduction.html#benchmark) between Laravel Octane and Laravel Hyperf
+> You can see [benchmark comparison](https://laravel-hyperf.com/docs/introduction.html#benchmark) between Laravel Octane and Laravel Hyperf
 
 In such cases, even with Laravel Octane's improvements, your application's ability to handle concurrent requests is still limited by the duration of these I/O operations. Laravel Hyperf addresses this issue by leveraging coroutines, allowing for efficient handling of concurrent I/O operations without blocking workers. This approach can significantly improve the performance and concurrency of applications with heavy I/O requirements.
 
