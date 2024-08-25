@@ -9,7 +9,7 @@
         "microservice",
         "laravel"
     ],
-    "description": "A Laravel styled framework skeleton based on powerful Hyperf framework.",
+    "description": "A Laravel style framework skeleton based on powerful Hyperf framework.",
     "license": "MIT",
     "require": {
         "php": ">=8.1",
@@ -54,15 +54,6 @@
             "tests/helpers.php"
         ]
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../framework",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
