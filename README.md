@@ -33,7 +33,7 @@ For I/O-intensive scenarios, Laravel Octane may not significantly boost performa
 
 ## Documentation
 
-[http://laravel-hyperf.com/introduction.html](http://laravel-hyperf.com/docs/introduction.html)
+[http://laravel-hyperf.com/docs/introduction.html](http://laravel-hyperf.com/docs/introduction.html)
 
 Laravel Hyperf provides comprehensive and user-friendly documentation that allows you to quickly get started. From this documentation, you can learn how to use various components in Laravel Hyperf and understand the differences between it and Laravel.
 
