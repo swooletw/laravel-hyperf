@@ -22,7 +22,7 @@
         "hyperf/validation": "~3.1.0",
         "hyperf/view": "~3.1.0",
         "hyperf/view-engine": "~3.1.0",
-        "swooletw/hyperf-packages": "@dev"
+        "swooletw/hyperf-packages": "dev-master"
     },
     "require-dev": {
         "fakerphp/faker": "^2.0",
