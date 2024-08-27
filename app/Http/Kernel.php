@@ -16,6 +16,8 @@ class Kernel extends HttpKernel
      * @var array<int, class-string|string>
      */
     protected array $middleware = [
+        // \App\Http\Middleware\TrimStrings::class
+        // \App\Http\Middleware\ConvertEmptyStringsToNull::class
     ];
 
     /**
