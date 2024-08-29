@@ -8,7 +8,7 @@ use SwooleTW\Hyperf\Http\Request;
 
 class IndexController extends AbstractController
 {
-    public function index(Request $request, ?string $name = null): array
+    public function index(Request $request): array
     {
         $user = $request->input('user', 'Hyperf');
         $method = $request->getMethod();
