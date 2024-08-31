@@ -142,6 +142,7 @@ return [
         'App' => SwooleTW\Hyperf\Support\Facades\App::class,
         'Artisan' => SwooleTW\Hyperf\Support\Facades\Artisan::class,
         'Auth' => SwooleTW\Hyperf\Support\Facades\Auth::class,
+        'Blade' => SwooleTW\Hyperf\Support\Facades\Blade::class,
         'Cache' => SwooleTW\Hyperf\Support\Facades\Cache::class,
         'Config' => SwooleTW\Hyperf\Support\Facades\Config::class,
         'Cookie' => SwooleTW\Hyperf\Support\Facades\Cookie::class,
