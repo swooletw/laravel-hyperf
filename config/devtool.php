@@ -49,5 +49,14 @@ return [
             'inheritance' => 'Model',
             'uses' => App\Models\Model::class,
         ],
+        'event' => [
+            'namespace' => 'App\Events',
+        ],
+        'provider' => [
+            'namespace' => 'App\Providers',
+        ],
+        'component' => [
+            'namespace' => 'App\View\Component',
+        ],
     ],
 ];
