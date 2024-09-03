@@ -163,6 +163,7 @@ return [
         'Response' => SwooleTW\Hyperf\Support\Facades\Response::class,
         'Route' => SwooleTW\Hyperf\Support\Facades\Route::class,
         'Schedule' => SwooleTW\Hyperf\Support\Facades\Schedule::class,
+        'Session' => SwooleTW\Hyperf\Support\Facades\Session::class,
         'URL' => SwooleTW\Hyperf\Support\Facades\URL::class,
         'Validator' => SwooleTW\Hyperf\Support\Facades\Validator::class,
         'View' => SwooleTW\Hyperf\Support\Facades\View::class,

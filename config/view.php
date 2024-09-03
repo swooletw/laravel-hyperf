@@ -16,8 +16,8 @@ return [
     'engine' => HyperfViewEngine::class,
     'mode' => Mode::SYNC,
     'config' => [
-        'view_path' => BASE_PATH . '/resources/views/',
-        'cache_path' => BASE_PATH . '/storage/framework/views/',
+        'view_path' => base_path('resources/views/'),
+        'cache_path' => storage_path('framework/views/'),
     ],
     'components' => [
         //
