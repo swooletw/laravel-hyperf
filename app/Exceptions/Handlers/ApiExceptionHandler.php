@@ -27,6 +27,11 @@ class ApiExceptionHandler extends HttpExceptionHandler
             'message' => $this->getMessage($throwable),
         ];
 
+        if ($throwable instanceof ValidationException) {
+            /* @phpstan-ignore-next-line */
+            $result['errors'] = $throwable->validator->errors()->toArray();
+        }
+
         if (environment()->isDebug() && ! environment()->isTesting()) {
             $e = FlattenException::createFromThrowable($throwable);
             $result['trace'] = $e->getTrace();
@@ -62,7 +67,12 @@ class ApiExceptionHandler extends HttpExceptionHandler
     protected function getMessage(Throwable $e): string
     {
         if ($e instanceof ValidationException) {
-            return $e->validator->errors()->first();
+            $message = $e->validator->errors()->first();
+            $errorsCount = $e->validator->errors()->count();
+            if ($errorsCount > 1) {
+                $message = $message . ' (and ' . $errorsCount - 1 . ' more errors)';
+            }
+            return $message;
         }
 
         $message = $message = $e->getMessage() ?? null;
