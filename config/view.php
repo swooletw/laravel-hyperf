@@ -16,10 +16,9 @@ return [
     'engine' => HyperfViewEngine::class,
     'mode' => Mode::SYNC,
     'config' => [
-        'view_path' => base_path('resources/views/'),
-        'cache_path' => storage_path('framework/views/'),
+        'view_path' => base_path('resources/views'),
+        'cache_path' => storage_path('framework/views'),
     ],
     'components' => [
-        //
     ],
 ];
