@@ -25,7 +25,7 @@ In such cases, even with Laravel Octane's improvements, your application's abili
 
 For I/O-intensive scenarios, Laravel Octane may not significantly boost performance. Moreover, and it's unlikely that Laravel Octane will support coroutines in the near future, given that only Swoole runtime currently supports this feature and considering backward compatibility with the framework and third-party packages.
 
-> Even if Laravel Octane supported coroutines, they would be limited to a single request, with workers remaining blocked until all I/O operations within that request are completed.
+> Even if Laravel Octane supported coroutines, these coroutines would still be limited to a single request, with workers remaining blocked until all I/O operations within that request completed. That means your Laravel application can't get better QPS results in this kind of scenario.
 
 > See [this pull request](https://github.com/swoole/swoole-src/pull/4330) for more information.
 
