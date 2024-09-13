@@ -1,3 +1,5 @@
+<p align="center"><a href="https://laravel-hyperf.com" target="_blank"><img src="https://laravel-hyperf.com/logo.svg" width="400"></a></p>
+
 <p align="center">
 <a href="https://github.com/swooletw/hyperf-packages/actions"><img src="https://github.com/swooletw/hyperf-packages/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/swooletw/hyperf-packages"><img src="https://img.shields.io/packagist/dt/swooletw/hyperf-packages" alt="Total Downloads"></a>
@@ -23,7 +25,7 @@ Imagine building an AI-powered chatbot where each conversation API takes 3-5 sec
 
 In such cases, even with Laravel Octane's improvements, your application's ability to handle concurrent requests is still limited by the duration of these I/O operations. Laravel Hyperf addresses this issue by leveraging coroutines, allowing for efficient handling of concurrent I/O operations without blocking workers. This approach can significantly improve the performance and concurrency of applications with heavy I/O requirements.
 
-For I/O-intensive scenarios, Laravel Octane may not significantly boost performance. Moreover, and it's unlikely that Laravel Octane will support coroutines in the near future, given that only Swoole runtime currently supports this feature and considering backward compatibility with the framework and third-party packages.
+For I/O-intensive scenarios, Laravel Octane may not significantly boost performance. Moreover, and it's unlikely that Laravel Octane will support coroutines in the near future (see [this issue](https://github.com/laravel/octane/issues/765)), given that only Swoole runtime currently supports this feature and considering backward compatibility with the framework and third-party packages.
 
 > Even if Laravel Octane supported coroutines, these coroutines would still be limited to a single request, with workers remaining blocked until all I/O operations within that request completed. That means your Laravel application can't get better QPS results in this kind of scenario.
 
