@@ -7,12 +7,15 @@
         "framework",
         "hyperf",
         "microservice",
-        "laravel"
+        "laravel",
+        "laravel-hyperf"
     ],
     "description": "A Laravel style framework skeleton based on powerful Hyperf framework.",
     "license": "MIT",
     "require": {
         "php": ">=8.1",
+        "ext-redis": "*",
+        "ext-session": "*",
         "friendsofhyperf/http-client": "^3.1",
         "friendsofhyperf/model-observer": "~3.1.0",
         "friendsofhyperf/pretty-console": "~3.1.0",
@@ -33,13 +36,6 @@
         "hyperf/testing": "~3.1.0",
         "hyperf/watcher": "~3.1.0",
         "phpstan/phpstan": "^1.0"
-    },
-    "suggest": {
-        "ext-openssl": "Required to use HTTPS.",
-        "ext-json": "Required to use JSON.",
-        "ext-pdo": "Required to use MySQL Client.",
-        "ext-pdo_mysql": "Required to use MySQL Client.",
-        "ext-redis": "Required to use Redis Client."
     },
     "autoload": {
         "psr-4": {
