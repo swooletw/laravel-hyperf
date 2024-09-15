@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+
+use SwooleTW\Hyperf\Foundation\Testing\TestScanHandler;
+
 ini_set('display_errors', 'on');
 ini_set('display_startup_errors', 'on');
 
@@ -13,7 +16,7 @@ Swoole\Runtime::enableCoroutine(true);
 
 require BASE_PATH . '/vendor/autoload.php';
 
-Hyperf\Di\ClassLoader::init();
+Hyperf\Di\ClassLoader::init(null, null, new TestScanHandler());
 
 $app = require BASE_PATH . '/bootstrap/app.php';
 
