@@ -11,7 +11,7 @@
 
 **Laravel Hyperf** is a Laravel-style skeleton based on [Hyperf](https://hyperf.io) framework designed for Laravel artisans.
 
-Besides the high performance brought by Swoole. It adopts Laravel's directory structure and component styles while migrating many common Laravel packages such as `Auth`, `Cache`, `Config`, `Container`, `Command`, `Database`, `Event`, `Facade`, `Router`, `Middleware`, `Log`, `Encryption`, `Testing` to be more coroutine-friendly. If you're a Laravel developer, you'll feel right at home with this framework, requiring minimal additional learning.
+Besides the high performance brought by Swoole. It adopts Laravel's directory structure and component styles while migrating many common Laravel packages such as `Auth`, `Cache`, `Config`, `Container`, `Command`, `Database`, `Event`, `Facade`, `Router`, `Middleware`, `Log`, `Encryption`, `Hashing`, `Error Handling`, `Validation`, `Service Provider`, `Blade`, `Eloquent`, `String`, `Array`, `Collection`, `Translation`, `Testing`, etc to be more coroutine-friendly. If you're a Laravel developer, you'll feel right at home with this framework, requiring minimal additional learning.
 
 ## Why Laravel Hyperf?
 
@@ -37,7 +37,7 @@ For I/O-intensive scenarios, Laravel Octane may not significantly boost performa
 
 [https://laravel-hyperf.com/docs](https://laravel-hyperf.com/docs)
 
-Laravel Hyperf provides comprehensive and user-friendly documentation that allows you to quickly get started. From this documentation, you can learn how to use various components in Laravel Hyperf and understand the differences between it and Laravel.
+Laravel Hyperf provides comprehensive and user-friendly documentation that allows you to quickly get started. From this documentation, you can learn how to use various components in Laravel Hyperf and understand the differences between this framework and Laravel.
 
 > Most of the content in this documentation is referenced from the official Laravel documentation. We appreciate the Laravel community's contributions.
 
