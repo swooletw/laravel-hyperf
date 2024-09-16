@@ -62,16 +62,20 @@
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
+        "post-create-project-cmd": [
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi"
+        ],
         "post-autoload-dump": [
             "rm -rf runtime/container"
         ],
-        "test": "co-phpunit --prepend tests/bootstrap.php -c phpunit.xml --colors=always",
+        "test": "co-phpunit --prepend tests/bootstrap.php -c phpunit.xml.dist --colors=always",
         "cs-diff": "php-cs-fixer fix --path-mode=intersection `git diff --name-only --diff-filter=ACMRTUXB origin/master..HEAD`",
         "cs-fix": "php-cs-fixer fix $1",
-        "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./app ./config",
+        "analyse": "phpstan analyse --memory-limit 300M -c phpstan.neon",
         "start": [
             "Composer\\Config::disableProcessTimeout",
-            "php hyperf start"
+            "php artisan start"
         ]
     }
 }
