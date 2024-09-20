@@ -37,10 +37,14 @@ return [
             'namespace' => 'App\Http\Requests',
         ],
         'model' => [
-            'path' => 'app/Models',
-            'force_casts' => true,
-            'inheritance' => 'Model',
+            'namespace' => 'App\Models',
             'uses' => App\Models\Model::class,
+        ],
+        'factory' => [
+            'path' => 'database/factories',
+        ],
+        'seeder' => [
+            'path' => 'database/seeders',
         ],
         'event' => [
             'namespace' => 'App\Events',
