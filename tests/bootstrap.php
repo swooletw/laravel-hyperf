@@ -9,8 +9,25 @@ ini_set('display_startup_errors', 'on');
 
 error_reporting(E_ALL);
 
-! defined('BASE_PATH') && define('BASE_PATH', dirname(__DIR__, 1));
 ! defined('SWOOLE_HOOK_FLAGS') && define('SWOOLE_HOOK_FLAGS', SWOOLE_HOOK_ALL);
+
+$dir = __DIR__;
+$lastDir = '';
+if (! defined('BASE_PATH')) {
+    while (! file_exists($dir . '/composer.json') && $dir !== dirname($dir)) {
+        if ($lastDir === $dir) {
+            break;
+        }
+        $lastDir = $dir;
+        $dir = dirname($dir);
+    }
+}
+
+if (! file_exists($dir . '/composer.json')) {
+    throw new RuntimeException("Unable to find base path (directory with composer.json)");
+}
+
+define('BASE_PATH', $dir);
 
 Swoole\Runtime::enableCoroutine(true);
 
