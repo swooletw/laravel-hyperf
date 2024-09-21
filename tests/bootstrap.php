@@ -24,7 +24,7 @@ if (! defined('BASE_PATH')) {
 }
 
 if (! file_exists($dir . '/composer.json')) {
-    throw new RuntimeException("Unable to find base path (directory with composer.json)");
+    throw new RuntimeException('Unable to find base path (directory with composer.json)');
 }
 
 define('BASE_PATH', $dir);
