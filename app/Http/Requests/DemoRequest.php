@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests;
 
-use Hyperf\Validation\Request\FormRequest;
-
+use SwooleTW\Hyperf\Foundation\Http\FormRequest;
 class DemoRequest extends FormRequest
 {
     /**
