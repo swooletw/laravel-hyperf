@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Requests;
 
 use SwooleTW\Hyperf\Foundation\Http\FormRequest;
+
 class DemoRequest extends FormRequest
 {
     /**
@@ -21,6 +22,9 @@ class DemoRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name' => 'required|string|min:3',
+            'email' => 'required|email',
+            'email2' => 'required|array',
         ];
     }
 }
