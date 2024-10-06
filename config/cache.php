@@ -65,7 +65,7 @@ return [
             'driver' => 'stack',
             'stores' => [
                 'swoole' => [
-                    'max_ttl' => 3, // seconds
+                    'ttl' => 3, // seconds
                 ],
                 'redis',
             ],
