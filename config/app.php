@@ -164,6 +164,7 @@ return [
         'Route' => SwooleTW\Hyperf\Support\Facades\Route::class,
         'Schedule' => SwooleTW\Hyperf\Support\Facades\Schedule::class,
         'Session' => SwooleTW\Hyperf\Support\Facades\Session::class,
+        'Storage' => SwooleTW\Hyperf\Support\Facades\Storage::class,
         'URL' => SwooleTW\Hyperf\Support\Facades\URL::class,
         'Validator' => SwooleTW\Hyperf\Support\Facades\Validator::class,
         'View' => SwooleTW\Hyperf\Support\Facades\View::class,
