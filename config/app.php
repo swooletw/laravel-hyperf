@@ -157,6 +157,8 @@ return [
         'JWT' => SwooleTW\Hyperf\Support\Facades\JWT::class,
         'Lang' => SwooleTW\Hyperf\Support\Facades\Lang::class,
         'Log' => SwooleTW\Hyperf\Support\Facades\Log::class,
+        'Mail' => SwooleTW\Hyperf\Support\Facades\Mail::class,
+        'Notification' => SwooleTW\Hyperf\Support\Facades\Notification::class,
         'RateLimiter' => SwooleTW\Hyperf\Support\Facades\RateLimiter::class,
         'Redis' => SwooleTW\Hyperf\Support\Facades\Redis::class,
         'Request' => SwooleTW\Hyperf\Support\Facades\Request::class,
