@@ -20,6 +20,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Concurrency Number
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the number of jobs that will be processed at once
+    | by every worker.
+    |
+    */
+    'concurrency_number' => env('QUEUE_CONCURRENCY_NUMBER', 1),
+
+    /*
+    |--------------------------------------------------------------------------
     | Queue Connections
     |--------------------------------------------------------------------------
     |
