@@ -29,8 +29,6 @@ if (! file_exists($dir . '/composer.json')) {
 
 define('BASE_PATH', $dir);
 
-Swoole\Runtime::enableCoroutine(true);
-
 require BASE_PATH . '/vendor/autoload.php';
 
 Hyperf\Di\ClassLoader::init(null, null, new TestScanHandler());
