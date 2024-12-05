@@ -13,7 +13,7 @@
     "description": "A Laravel style framework skeleton based on powerful Hyperf framework.",
     "license": "MIT",
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "ext-redis": "*",
         "ext-session": "*",
         "friendsofhyperf/model-observer": "~3.1.0",
