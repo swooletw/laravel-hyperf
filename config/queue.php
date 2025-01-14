@@ -38,13 +38,17 @@ return [
     | used by your application. An example configuration is provided for
     | each backend supported by Laravel Hyperf. You're also free to add more.
     |
-    | Drivers: "sync", "database", "beanstalkd", "sqs", "redis", "null"
+    | Drivers: "sync", "defer", "database", "beanstalkd", "sqs", "redis", "null"
     |
     */
 
     'connections' => [
         'sync' => [
             'driver' => 'sync',
+        ],
+
+        'defer' => [
+            'driver' => 'defer',
         ],
 
         'database' => [
