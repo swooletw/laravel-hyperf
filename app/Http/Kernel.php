@@ -29,8 +29,9 @@ class Kernel extends HttpKernel
         'web' => [
             // \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
             // \SwooleTW\Hyperf\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            // \Hyperf\Session\Middleware\SessionMiddleware::class,
-            // \Hyperf\ViewEngine\Http\Middleware\ShareErrorsFromSession::class,
+            // \SwooleTW\Hyperf\Session\Middleware\StartSession::class,
+            // \SwooleTW\Hyperf\View\Middleware\ShareErrorsFromSession::class,
+            // \App\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
@@ -63,5 +64,6 @@ class Kernel extends HttpKernel
         // \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
         // \Hyperf\Session\Middleware\SessionMiddleware::class,
         // \Hyperf\ViewEngine\Http\Middleware\ShareErrorsFromSession::class,
+        // \App\Http\Middleware\VerifyCsrfToken::class,
     ];
 }
