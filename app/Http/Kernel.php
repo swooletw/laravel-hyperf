@@ -62,8 +62,8 @@ class Kernel extends HttpKernel
     protected array $middlewarePriority = [
         // \SwooleTW\Hyperf\Router\Middleware\ThrottleRequests::class,
         // \SwooleTW\Hyperf\Router\Middleware\SubstituteBindings::class,
-        // \Hyperf\Session\Middleware\SessionMiddleware::class,
-        // \Hyperf\ViewEngine\Http\Middleware\ShareErrorsFromSession::class,
+        // \SwooleTW\Hyperf\Session\Middleware\StartSession::class,
+        // \SwooleTW\Hyperf\View\Middleware\ShareErrorsFromSession::class,
         // \App\Http\Middleware\VerifyCsrfToken::class,
     ];
 }
