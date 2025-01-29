@@ -10,7 +10,7 @@
         "laravel",
         "laravel-hyperf"
     ],
-    "description": "A Laravel style framework skeleton based on powerful Hyperf framework.",
+    "description": "A Laravel-style PHP framework with native coroutine support for ultra-high performance.",
     "license": "MIT",
     "require": {
         "php": ">=8.2",

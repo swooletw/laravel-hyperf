@@ -9,9 +9,11 @@
 
 ## Introduction
 
-**Laravel Hyperf** is a Laravel-style skeleton based on [Hyperf](https://hyperf.io) framework designed for Laravel artisans.
+**Laravel Hyperf** is a Laravel-style PHP framework with native coroutine support for ultra-high performance.
 
-Besides the high performance brought by Swoole. It adopts Laravel's directory structure and component styles while migrating many common Laravel packages such as `Auth`, `Cache`, `Config`, `Container`, `Command`, `Database`, `Event`, `Facade`, `Router`, `Middleware`, `Log`, `Encryption`, `Hashing`, `Error Handling`, `Validation`, `Service Provider`, `Blade`, `Eloquent`, `String`, `Array`, `Collection`, `Translation`, `Testing`, etc to be more coroutine-friendly. If you're a Laravel developer, you'll feel right at home with this framework, requiring minimal additional learning.
+Built on Swoole and [Hyperf](https://hyperf.io) framework, it ports many Laravel components while maintaining familiar usage patterns, making it instantly accessible to Laravel developers. The framework combines the elegant, expressive development experience of Laravel with the powerful performance benefits of coroutine-based programming. If you're a Laravel developer, you'll feel right at home with this framework, requiring minimal additional learning.
+
+Laravel Hyperf is an ideal choice for building microservices, API gateways, and high-concurrency applications where traditional PHP frameworks might struggle to perform.
 
 ## Why Laravel Hyperf?
 
