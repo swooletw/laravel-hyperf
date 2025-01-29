@@ -70,7 +70,6 @@
             <div class="links">
                 <a href="https://laravel-hyperf.com" target="_blank">Laravel Hyperf</a>
                 <a href="https://github.com/swooletw/laravel-hyperf" target="_blank">GitHub</a>
-                <a href="https://hyperf.io" target="_blank">Hyperf Framework</a>
             </div>
         </div>
     </div>
