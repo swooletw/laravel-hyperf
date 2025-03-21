@@ -1,10 +1,10 @@
 > **Warning**
 >
-> This repository has been transfered to [laravel-hyperf/laravel-hyperf](https://github.com/laravel-hyperf/laravel-hyperf).
+> This repository has been transfered to [hypervel/hypervel](https://github.com/hypervel/hypervel).
 >
 > Please go to the new repository for latest update.
 
-<p align="center"><a href="https://laravel-hyperf.com" target="_blank"><img src="https://laravel-hyperf.com/logo.svg" width="400"></a></p>
+<p align="center"><a href="https://hypervel.org" target="_blank"><img src="https://hypervel.org/logo.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://github.com/swooletw/hyperf-packages/actions"><img src="https://github.com/swooletw/hyperf-packages/workflows/tests/badge.svg" alt="Build Status"></a>
